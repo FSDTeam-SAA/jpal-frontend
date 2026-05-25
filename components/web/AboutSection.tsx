@@ -1,15 +1,14 @@
 // app/components/AboutSection.tsx
 "use client";
 
-import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutSection() {
   const features = [
     " Identifying distressed residential properties during the pre-foreclosure process ",
     "Targeting undervalued properties through pre-foreclosure analysis ",
     "Early-stage identification of distressed residential assets in pre-foreclosure ",
-   
   ];
 
   return (
@@ -38,10 +37,14 @@ export default function AboutSection() {
             Who We Are
           </p>
           <h2 className="text-3xl md:text-4xl font-serif text-[#224262] mb-4 ">
-            Florida Real Estate PartnershipsDisciplined Acquisitions Trusted Partnerships.
+            Florida-Based Real Estate Investment
           </h2>
           <p className="text-[#676F7E] mb-6 text-xl font-sans">
-          Buy Rite Properties LLC is a Florida-based real estate investment company specializing in the identification and acquisition of distressed and undervalued residential properties through pre-foreclosure opportunities, county foreclosure sales, and public auctions throughout Palm Beach and Martin Counties.
+            Buy Rite Properties LLC is a Florida-based real estate investment
+            company specializing in the identification and acquisition of
+            distressed and undervalued residential properties through
+            pre-foreclosure opportunities, county foreclosure sales, and public
+            auctions throughout Palm Beach and Martin Counties.
           </p>
 
           <ul className="space-y-3">

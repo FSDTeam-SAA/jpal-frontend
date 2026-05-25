@@ -40,10 +40,12 @@ export default function InvestorPartnerships() {
           <p className="font-sans text-[13px] uppercase tracking-[0.22em] text-[#d2a647]">
             Partner With Us
           </p>
-          <h2 className="mt-2 text-3xl lg:text-[50px] leading-tight text-white">Investor Partnerships</h2>
+          <h2 className="mt-2 text-3xl lg:text-[50px] leading-tight text-white">
+            Partnerships
+          </h2>
           <p className="mx-auto mt-3 max-w-[620px] font-sans text-[16px] leading-relaxed text-[#b6c4d6]">
-            Buy Rite Properties actively seeks strategic investor partners to assist with
-            acquisition funding following successful auction bids.
+            Buy Rite Properties actively seeks strategic investor partners to
+            assist with acquisition funding following successful auction bids.
           </p>
         </div>
 
@@ -59,7 +61,9 @@ export default function InvestorPartnerships() {
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-[#27496f]">
                   <Icon className="h-5 w-5 text-[#d2a647]" strokeWidth={1.9} />
                 </div>
-                <h3 className="text-[20px] leading-snug text-white">{feature.title}</h3>
+                <h3 className="text-[20px] leading-snug text-white">
+                  {feature.title}
+                </h3>
                 <p className="mt-3 font-sans text-[16px] leading-relaxed text-[#a9bbce]">
                   {feature.description}
                 </p>
@@ -73,7 +77,9 @@ export default function InvestorPartnerships() {
             Our Mission
           </p>
           <p className="mx-auto mt-3 max-w-[620px] text-[22px] leading-[1.26] text-white sm:text-[26px] font-semibold">
-            "To responsibly acquire, improve, and reposition residential real estate assets while creating value for investors and expanding affordable homeownership throughout South Florida."
+            "To responsibly acquire, improve, and reposition residential real
+            estate assets while creating value for investors and expanding
+            affordable homeownership throughout South Florida."
           </p>
           <Button
             asChild

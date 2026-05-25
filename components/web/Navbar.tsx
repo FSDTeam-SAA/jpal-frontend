@@ -13,7 +13,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Strategy", href: "#strategy" },
   { label: "Markets", href: "#markets" },
-  { label: "Investors", href: "#investors" },
+  { label: "Partners", href: "#investors" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -88,7 +88,7 @@ export default function Navbar() {
     <section className="bg-[#224262] sticky top-0 z-50">
       <nav className="container relative mx-auto flex items-center justify-center px-4 py-4 text-white lg:px-4 lg:py-10">
         {/* Logo */}
-        <div className="absolute left-4 flex h-[15px] w-[50px] items-center lg:h-[25px] lg:w-[80px]">
+        <div className="absolute left-4 flex h-[34px] w-[86px] items-center lg:h-[64px] lg:w-[150px]">
           <Link
             href="#home"
             aria-label="Go to top section"
@@ -96,8 +96,8 @@ export default function Navbar() {
           >
             <Image
               src="/logo.png"
-              width={1000}
-              height={1000}
+              width={1500}
+              height={1500}
               alt="Buy-Rite Properties"
               className="h-full w-full object-cover"
             />
@@ -106,7 +106,7 @@ export default function Navbar() {
 
         <section className="flex flex-col items-center gap-4 text-center">
           <div>
-            <h1 className="font-serif text-base font-semibold lg:text-lg">
+            <h1 className="font-serif text-base font-semibold lg:text-5xl">
               Buy - Rite Properties
             </h1>
           </div>

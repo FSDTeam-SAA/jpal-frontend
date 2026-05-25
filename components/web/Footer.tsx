@@ -1,15 +1,15 @@
 // app/components/Footer.tsx
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const navLinks = [
     { label: "About", href: "#about" },
     { label: "Strategy", href: "#strategy" },
     { label: "Markets", href: "#markets" },
-    { label: "Investors", href: "#investors" },
+    { label: "Partners", href: "#investors" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -57,9 +57,10 @@ export default function Footer() {
         </div>
 
         <p className="mx-auto mt-6 max-w-[920px] text-center font-sans text-[15px] leading-relaxed text-[#5f7590]">
-          This website is for informational purposes only and does not constitute an offer to sell
-          or a solicitation of an offer to buy any security. Real estate investments involve risk.
-          Past performance is not indicative of future results.
+          This website is for informational purposes only and does not
+          constitute an offer to sell or a solicitation of an offer to buy any
+          security. Real estate investments involve risk. Past performance is
+          not indicative of future results.
         </p>
       </div>
     </footer>
