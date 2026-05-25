@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  // oapt
 };
 
 export default nextConfig;

@@ -1,12 +1,8 @@
 // app/components/ContactSection.tsx
 "use client";
 
-import { useState, type FormEvent, type ChangeEvent } from "react";
-import emailjs from "@emailjs/browser";
-import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -14,7 +10,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { MapPin, Mail } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import emailjs from "@emailjs/browser";
+import { Mail, MapPin } from "lucide-react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import { toast } from "sonner";
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
@@ -31,7 +31,9 @@ export default function ContactSection() {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -74,7 +76,9 @@ export default function ContactSection() {
     if (isSubmitting) return;
 
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      toast.error("Email service is not configured. Please add EmailJS credentials.");
+      toast.error(
+        "Email service is not configured. Please add EmailJS credentials.",
+      );
       return;
     }
 
@@ -94,7 +98,7 @@ export default function ContactSection() {
           from_phone: formData.phone.trim() || "Not provided",
           message: formData.message.trim(),
         },
-        { publicKey: EMAILJS_PUBLIC_KEY }
+        { publicKey: EMAILJS_PUBLIC_KEY },
       );
 
       toast.success("Message sent successfully.");
@@ -115,11 +119,12 @@ export default function ContactSection() {
               Reach Out
             </p>
             <h2 className="mt-2 text-3xl  lg:text-[40px] leading-tight text-[#153d66] sm:text-[58px]">
-              Get In Touch Contact us
+              Contact us
             </h2>
             <p className="mt-4 max-w-[560px] font-sans text-[16px] leading-relaxed text-[#5a6f85]">
-              Whether you're a home buyer,real estate investor looking to partner with us, or you
-              want to learn more about our acquisition strategy, we'd love to hear from you.
+              Whether you're a homebuyer, a real estate investor, or looking to
+              partner with us, or you want to learn more about our acquisition
+              strategy, we'd love to hear from you.
             </p>
 
             <div className="mt-9 space-y-6">
@@ -128,7 +133,9 @@ export default function ContactSection() {
                   <MapPin className="h-5 w-5 text-[#173e66]" />
                 </div>
                 <div>
-                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">Service Area</p>
+                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">
+                    Service Area
+                  </p>
                   <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
                     Palm Beach County & Martin County, Florida
                   </p>
@@ -140,7 +147,9 @@ export default function ContactSection() {
                   <Mail className="h-5 w-5 text-[#173e66]" />
                 </div>
                 <div>
-                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">Email</p>
+                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">
+                    Email
+                  </p>
                   <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
                     info@buy-rite-properties.com
                   </p>
@@ -159,7 +168,9 @@ export default function ContactSection() {
               </label>
               <Select
                 value={formData.userType}
-                onValueChange={(value) => setFormData((prev) => ({ ...prev, userType: value }))}
+                onValueChange={(value) =>
+                  setFormData((prev) => ({ ...prev, userType: value }))
+                }
               >
                 <SelectTrigger className="!h-[44px] w-full rounded-md border-[#cfd5dc] px-4 font-sans text-[15px] text-[#132f4f] data-[state=open]:border-[#8f98a3]">
                   <SelectValue placeholder="Potential Investor" />
@@ -260,24 +271,32 @@ export default function ContactSection() {
 
         <div className="mt-10 rounded-lg border border-[#d2d7dd] bg-white/70 p-5 shadow-[0_2px_8px_rgba(8,24,44,0.05)] md:p-6">
           <p className="font-sans text-sm leading-relaxed text-[#4e6176]">
-            <span className="font-medium text-[#132f4f]">Legal Disclaimer: </span>
-            Buy Rite Properties LLC is a real estate investment company and does not provide legal,
-            tax, accounting, or financial advisory services. All information presented on this
-            website and in related materials is for informational purposes only and should not be
-            construed as legal, financial, or investment advice. Real estate investments involve
-            risk, and past performance does not guarantee future results. Any projected returns,
-            valuations, or investment opportunities referenced are estimates only and may change
-            based on market conditions and other factors. Prospective partners, investors, and
-            clients are encouraged to conduct their own due diligence and consult with licensed
-            legal, tax, and financial professionals before making any investment or real estate
-            decisions. Buy Rite Properties LLC acquires properties through various channels,
-            including pre-foreclosure opportunities, county foreclosure sales, public auctions, and
-            negotiated transactions. Property availability, pricing, title status, occupancy, liens,
-            and condition may change without notice. While every effort is made to verify property
-            information, Buy Rite Properties LLC makes no guarantees or warranties regarding the
-            accuracy or completeness of any information provided. All content, branding, logos, and
-            materials on this website are the property of Buy Rite Properties LLC and may not be
-            copied, reproduced, or distributed without prior written consent.
+            <span className="font-medium text-[#132f4f]">
+              Legal Disclaimer:{" "}
+            </span>
+            Buy Rite Properties LLC is a real estate investment company and does
+            not provide legal, tax, accounting, or financial advisory services.
+            All information presented on this website and in related materials
+            is for informational purposes only and should not be construed as
+            legal, financial, or investment advice. Real estate investments
+            involve risk, and past performance does not guarantee future
+            results. Any projected returns, valuations, or investment
+            opportunities referenced are estimates only and may change based on
+            market conditions and other factors. Prospective partners,
+            investors, and clients are encouraged to conduct their own due
+            diligence and consult with licensed legal, tax, and financial
+            professionals before making any investment or real estate decisions.
+            Buy Rite Properties LLC acquires properties through various
+            channels, including pre-foreclosure opportunities, county
+            foreclosure sales, public auctions, and negotiated transactions.
+            Property availability, pricing, title status, occupancy, liens, and
+            condition may change without notice. While every effort is made to
+            verify property information, Buy Rite Properties LLC makes no
+            guarantees or warranties regarding the accuracy or completeness of
+            any information provided. All content, branding, logos, and
+            materials on this website are the property of Buy Rite Properties
+            LLC and may not be copied, reproduced, or distributed without prior
+            written consent.
           </p>
         </div>
       </div>
