@@ -132,7 +132,7 @@ export default function Navbar() {
               className="bg-[#BC933E] text-[#1A1A1A] hover:bg-[#d6ab5a] font-sans h-10 rounded-[4px] text-base font-normal"
             >
               <Link href="#contact" onClick={handleSectionNav("#contact")}>
-                Get In Touch
+                Contact us
               </Link>
             </Button>
           </div>

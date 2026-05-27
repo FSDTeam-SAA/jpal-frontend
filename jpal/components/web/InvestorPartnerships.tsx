@@ -9,7 +9,7 @@ const features = [
   {
     title: "Asset-Backed Security",
     description:
-      "Every debt instrument investment is secured by a physical real estate asset - not paper instruments or unsecured debt",
+      "Every debt instrument is secured by a physical real estate asset not unsecured debt",
     icon: Shield,
   },
   {
@@ -79,8 +79,8 @@ export default function InvestorPartnerships() {
           </p>
           <p className="mx-auto mt-3 max-w-[620px] text-[22px] leading-[1.26] text-white sm:text-[26px] font-semibold">
             "To responsibly acquire, improve, and reposition residential real
-            estate assets while creating value for investors and expanding
-            affordable homeownership throughout South Florida."
+            estate assets while creating value and expanding affordable
+            homeownership throughout South Florida."
           </p>
           <Button
             asChild

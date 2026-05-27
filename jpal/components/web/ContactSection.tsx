@@ -122,29 +122,28 @@ export default function ContactSection() {
               Contact us
             </h2>
             <p className="mt-4 max-w-[560px] font-sans text-[16px] leading-relaxed text-[#5a6f85]">
-              Whether you're a homebuyer, a real estate investor, or looking to
-              partner with us, or you want to learn more about our acquisition
-              strategy, we'd love to hear from you.
+              Whether you&apos;re a homebuyer, a real estate investor, a lender
+              or looking to partner with us
             </p>
 
             <div className="mt-9 space-y-6">
               <div className="flex items-start gap-4">
-  <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#d7dde5]">
-    <MapPin className="h-5 w-5 text-[#173e66]" />
-  </div>
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#d7dde5]">
+                  <MapPin className="h-5 w-5 text-[#173e66]" />
+                </div>
 
-  <div>
-    <p className="font-sans text-[16px] font-medium text-[#132f4f]">
-      Business Address
-    </p>
+                <div>
+                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">
+                    Business Address
+                  </p>
 
-    <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
-      Buy Rite Properties <br />
-      470 Fountains Drive South <br />
-      Lake Worth, Florida 33461
-    </p>
-  </div>
-</div>
+                  <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
+                    Buy Rite Properties <br />
+                    470 Fountains Drive South <br />
+                    Lake Worth, Florida 33461
+                  </p>
+                </div>
+              </div>
 
               <div className="flex items-start gap-4">
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#d7dde5]">
@@ -160,20 +159,20 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-  <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#d7dde5]">
-    <Phone className="h-5 w-5 text-[#173e66]" />
-  </div>
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#d7dde5]">
+                  <Phone className="h-5 w-5 text-[#173e66]" />
+                </div>
 
-  <div>
-    <p className="font-sans text-[16px] font-medium text-[#132f4f]">
-      Phone
-    </p>
+                <div>
+                  <p className="font-sans text-[16px] font-medium text-[#132f4f]">
+                    Phone
+                  </p>
 
-    <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
-      (561) 692-2800
-    </p>
-  </div>
-</div>
+                  <p className="font-sans text-[15px] leading-relaxed text-[#5a6f85]">
+                    (561) 692-2800
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
